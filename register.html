@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2e8b57, #2e8b57);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fffbfbf8;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2e8b57;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin: -15px 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+      <label>Username:</label>
+      <input type="text" id="username" placeholder="Enter username" />
+      <div class="error" id="usernameError"></div>
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="Enter email" />
+      <div class="error" id="emailError"></div>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Enter password" />
+      <div class="error" id="passwordError"></div>
+
+      <label>Confirm Password:</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm password" />
+      <div class="error" id="confirmPasswordError"></div>
+
+      <button type="submit">Register</button>
+      
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let isValid = true;
+
+      // Clear previous errors
+      document.querySelectorAll('.error').forEach(el => el.innerText = '');
+
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (username === '') {
+      document.getElementById('usernameError').innerText = 'Username is required';
+      isValid = false;
+      } 
+      else if (/\d/.test(username)) {
+      document.getElementById('usernameError').innerText = 'Username should not contain numbers';
+    isValid = false;
+}
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (email === '' || !emailPattern.test(email)) {
+        document.getElementById('emailError').innerText = 'Enter a valid email';
+        isValid = false;
+      }
+
+      if (password.length < 6) {
+        document.getElementById('passwordError').innerText = 'Password must be at least 6 characters';
+        isValid = false;
+      }
+
+      if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').innerText = 'Passwords do not match';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Registration successful!');
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>

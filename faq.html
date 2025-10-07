@@ -1,0 +1,68 @@
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+  <button class="faq-question">What is the check-in time?</button>
+  <div class="faq-answer">Check-in starts from 12:00 PM.</div>
+
+  <button class="faq-question">Do you offer vegetarian meals?</button>
+  <div class="faq-answer">Yes, we offer both vegetarian and non-vegetarian options.</div>
+  <button class="faq-question">What are the check-in and check-out times?</button>
+<div class="faq-answer">Check-in is from 12:00 PM and check-out is until 11:00 AM.</div>
+
+<button class="faq-question">Can I cancel or modify my booking?</button>
+<div class="faq-answer">Yes, you can cancel or modify your booking up to 24 hours before check-in without any charges.</div>
+
+<button class="faq-question">Is breakfast included in the room rate?</button>
+<div class="faq-answer">Yes, complimentary breakfast is included with most room bookings.</div>
+
+<button class="faq-question">Do you offer airport pickup and drop services?</button>
+<div class="faq-answer">Yes, we provide airport pickup and drop services on request at an additional cost.</div>
+
+<button class="faq-question">Is parking available at the hotel?</button>
+<div class="faq-answer">Yes, we offer free on-site parking for our guests.</div>
+
+<button class="faq-question">Do you allow pets in the hotel?</button>
+<div class="faq-answer">We regret to inform you that pets are not allowed inside the hotel premises.</div>
+
+<button class="faq-question">Are there any special facilities for differently-abled guests?</button>
+<div class="faq-answer">Yes, we have wheelchair access and specially designed rooms for differently-abled guests.</div>
+
+<button class="faq-question">Is the restaurant open to non-resident guests?</button>
+<div class="faq-answer">Yes, our restaurant is open to both in-house and walk-in guests.</div>
+
+<button class="faq-question">Do you offer vegetarian or vegan food options?</button>
+<div class="faq-answer">Absolutely! Our restaurant has a wide variety of vegetarian and vegan dishes available.</div>
+
+<button class="faq-question">What safety and hygiene measures are in place post-COVID?</button>
+<div class="faq-answer">We follow all government-mandated hygiene protocols including regular sanitization, contactless check-ins, and temperature checks.</div>
+
+</div>
+
+<style>
+  .faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    background-color: #2e8b57;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 4px solid #2e8b57;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rooms - Woodland</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
+    }
+
+    header {
+      background-color: #2e8b57;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2e8b57;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    .room-section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .room {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .room img {
+      width: 100%;
+      max-width: 400px;
+      object-fit: cover;
+    }
+
+    .room-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .room-content h2 {
+      background-color: #ebefec;
+      margin-top: 0;
+    }
+
+    .room-content p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .room {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .room img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Rooms</h1>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="menu.html">Menu</a>
+    <a href="restaurant.html">Restaurant</a>
+    <a href="services.html">Services</a>
+    <a href="event.html">Event</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <section class="room-section">
+
+    <div class="room">
+      <img src="c:\Users\TIRTH\OneDrive\Documents\Desktop\simple bed image.avif" alt="Regular Room">
+      <div class="room-content">
+        <h2>Regular Room</h2>
+        <p>
+          A comfortable and cozy option for solo travelers or short stays. Includes a queen-sized bed,
+          free Wi-Fi, TV, attached bathroom, and complimentary breakfast.
+        </p>
+      </div>
+    </div>
+
+    <div class="room">
+      <img src="c:\Users\TIRTH\OneDrive\Documents\Desktop\deluxe bed rooms.avif" alt="Deluxe Room">
+      <div class="room-content">
+        <h2>Deluxe Room</h2>
+        <p>
+          Perfect for couples or business travelers. The Deluxe Room features elegant interiors,
+          king-sized bed, minibar, balcony with scenic views, and 24/7 room service.
+        </p>
+      </div>
+    </div>
+
+    <div class="room">
+      <img src="c:\Users\TIRTH\OneDrive\Pictures\Screenshots\Screenshot 2025-07-02 131332.png" alt="Super Deluxe Room">
+      <div class="room-content">
+        <h2>Super Deluxe Room</h2>
+        <p>
+          Our most luxurious stay offering premium furnishings, a private lounge area, bath tub,
+          smart TV, and personalized hospitality for an unforgettable experience.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Woodland Hotel & Restaurant. All rights reserved.
+  </footer>
+
+</body>
+</html>

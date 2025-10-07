@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Woodland | Home</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+}
+header {
+background-color: #2e8b57;
+color: white;
+padding: 20px;
+text-align: center;
+}
+nav {
+background-color: #246b45;
+display: flex;
+justify-content: center;
+padding: 10px 0;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+nav a:hover {
+text-decoration: underline;
+}
+.slider {
+position: relative;
+width: 100%;
+max-width: 900px;
+height: 450px;
+margin: 30px auto;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+}
+.slides {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+.slide {
+min-width: 100%;
+height: 100%;
+}
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.buttons {
+position: absolute;
+top: 50%;
+width: 100%;
+
+display: flex;
+justify-content: space-between;
+transform: translateY(-50%);
+padding: 0 20px;
+}
+.buttons button {
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+padding: 10px 20px;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+}
+.buttons button:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+section {
+
+max-width: 900px;
+margin: 40px auto;
+padding: 0 20px;
+}
+section h2 {
+color: #2e8b57;
+margin-bottom: 15px;
+}
+section p {
+font-size: 16px;
+color: #333;
+line-height: 1.6;
+}
+footer {
+background-color: #2e8b57;
+color: white;
+text-align: center;
+padding: 15px 0;
+
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Welcome to Woodland Hotel & Restaurant</h1>
+</header>
+<nav>
+<a href="#">Home</a>
+<a href="#">Rooms</a>
+<a href="#">Menu</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+<div class="slider">
+<div class="slides" id="slideContainer">
+
+<div class="slide"><img
+src width='100' = "c:\Users\TIRTH\OneDrive\Documents\Desktop\swimming pool.jpg" alt="Image
+1"></div>
+<div class="slide"><img
+src="c:\Users\TIRTH\OneDrive\Documents\Desktop\garden.jpg" alt="Image
+2"></div>
+<div class="slide"><img
+src="c:\Users\TIRTH\OneDrive\Documents\Desktop\hotel 3 photo.jpg" alt="Image
+3"></div>
+</div>
+<div class="buttons">
+<button onclick="prevSlide()">❮ Prev</button>
+<button onclick="nextSlide()">Next ❯</button>
+</div>
+</div>
+<section>
+<h2>About Us</h2>
+<p>Woodland Hotel & Restaurant is a perfect blend of nature, comfort, and cuisine.
+Nestled in serene surroundings, we offer premium stays and delightful dishes that
+celebrate both tradition and taste.</p>
+</section>
+<section>
+
+<h2>Our Services</h2>
+<p>We provide a wide range of services including deluxe rooms, banquet halls,
+outdoor garden dining, and customized event hosting. Whether it’s a weekend
+getaway or a special celebration, Woodland is your go-to destination.</p>
+</section>
+<footer>
+<p>&copy; 2025 Woodland Hotel & Restaurant. All rights reserved.</p>
+</footer>
+<script>
+const slides = document.getElementById("slideContainer");
+const totalSlides = slides.children.length;
+let currentIndex = 0;
+function updateSlidePosition() {
+slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+function nextSlide() {
+currentIndex = (currentIndex + 1) % totalSlides;
+updateSlidePosition();
+}
+
+function prevSlide() {
+currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+updateSlidePosition();
+}
+</script>
+</body>
+</html>
